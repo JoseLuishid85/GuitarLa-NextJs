@@ -4,8 +4,7 @@ import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
 
-    const carritoLS = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('carrito'))  ?? [] : []
-    const [ carrito,setCarrito ] = useState(carritoLS)
+    const [ carrito,setCarrito ] = useState()
     const [paginaLista, setPaginaLista] = useState(false)
 
     useEffect(() => {
